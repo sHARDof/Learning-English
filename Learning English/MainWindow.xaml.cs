@@ -19,12 +19,7 @@ namespace Learning_English
         public static string[] arr_words = new string[212];
         public static string[] arr_trans = new string[212];
 
-        static string base_directory = Directory.GetCurrentDirectory();
-
-        public static MainWindow Window;
-        
-        static StreamReader words = new StreamReader(base_directory + @"\temp\Words.txt");
-        static StreamReader translation = new StreamReader(base_directory + @"\temp\Translate.txt");
+        public static MainWindow Window;       
 
         public MainWindow()
         {           
