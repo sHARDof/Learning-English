@@ -1,0 +1,20 @@
+C:\Users\sHARD\source\repos\Learning English\Learning English\bin\Debug\netcoreapp3.1\Learning English.exe
+C:\Users\sHARD\source\repos\Learning English\Learning English\bin\Debug\netcoreapp3.1\Learning English.deps.json
+C:\Users\sHARD\source\repos\Learning English\Learning English\bin\Debug\netcoreapp3.1\Learning English.runtimeconfig.json
+C:\Users\sHARD\source\repos\Learning English\Learning English\bin\Debug\netcoreapp3.1\Learning English.runtimeconfig.dev.json
+C:\Users\sHARD\source\repos\Learning English\Learning English\bin\Debug\netcoreapp3.1\Learning English.dll
+C:\Users\sHARD\source\repos\Learning English\Learning English\bin\Debug\netcoreapp3.1\Learning English.pdb
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English.csproj.AssemblyReference.cache
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English_MarkupCompile.cache
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English_MarkupCompile.lref
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English.g.resources
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English.AssemblyInfoInputs.cache
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English.AssemblyInfo.cs
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English.csproj.CoreCompileInputs.cache
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English.dll
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English.pdb
+C:\Users\sHARD\source\repos\Learning English\Learning English\obj\Debug\netcoreapp3.1\Learning English.genruntimeconfig.cache
