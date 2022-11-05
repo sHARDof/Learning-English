@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Learning_English"
         mc:Ignorable="d"
-        Icon="C:\Users\sHARD\source\repos\Learning English\Learning English\temp\Logo.png"
+        Icon="C:\Users\sHARD\source\repos\Learning-English\Learning English\temp\Logo.png"
         Title="Learning" Height="500" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="FocusVisual">
@@ -108,8 +108,8 @@
                         <TextBox Name="Input_Trans" FontSize="15" TextAlignment="Center" FontFamily="Open Sans Extrabold" Background="Transparent" BorderBrush="Transparent" ></TextBox>
                     </Border>
                     <Grid Height="31" Margin="5">
-                        <Image Name="AcceptImage" Visibility="Hidden" Source="C:/Users/sHARD/source/repos/Learning English/Learning English/temp/Accept.png" Height="30" Width="36"/>
-                        <Image Name="CloseImage" Visibility="Hidden" Source="C:/Users/sHARD/source/repos/Learning English/Learning English/temp/Close.png" Height="30" Width="36"/>
+                        <Image Name="AcceptImage" Visibility="Hidden" Source="C:/Users/sHARD/source/repos/Learning-English/Learning English/temp/Accept.png" Height="30" Width="36"/>
+                        <Image Name="CloseImage" Visibility="Hidden" Source="C:/Users/sHARD/source/repos/Learning-English/Learning English/temp/Close.png" Height="30" Width="36"/>
                     </Grid>
                     <Grid>
                         <Border Width="96" Background="Gray" CornerRadius="9" Margin="152,0,152,-94" Height="38">

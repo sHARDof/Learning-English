@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sHARD\\source\\repos\\Learning English\\Learning English\\Learning English.csproj": {}
+    "C:\\Users\\sHARD\\source\\repos\\Learning-English\\Learning English\\Learning English.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sHARD\\source\\repos\\Learning English\\Learning English\\Learning English.csproj": {
+    "C:\\Users\\sHARD\\source\\repos\\Learning-English\\Learning English\\Learning English.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sHARD\\source\\repos\\Learning English\\Learning English\\Learning English.csproj",
+        "projectUniqueName": "C:\\Users\\sHARD\\source\\repos\\Learning-English\\Learning English\\Learning English.csproj",
         "projectName": "Learning English",
-        "projectPath": "C:\\Users\\sHARD\\source\\repos\\Learning English\\Learning English\\Learning English.csproj",
+        "projectPath": "C:\\Users\\sHARD\\source\\repos\\Learning-English\\Learning English\\Learning English.csproj",
         "packagesPath": "C:\\Users\\sHARD\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sHARD\\source\\repos\\Learning English\\Learning English\\obj\\",
+        "outputPath": "C:\\Users\\sHARD\\source\\repos\\Learning-English\\Learning English\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

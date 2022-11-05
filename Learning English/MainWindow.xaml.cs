@@ -25,13 +25,13 @@ namespace Learning_English
         {           
             InitializeComponent();
             Window = this;
-            foreach (string line in File.ReadLines(@"C:\Users\sHARD\source\repos\test\test\Words.txt"))
+            foreach (string line in File.ReadLines(@"C:\Users\sHARD\source\repos\Learning-English\Learning English\temp\Words.txt"))
             {
                 arr_words[index_words] = line;
                 index_words++;
             }
 
-            foreach (string lines in File.ReadLines(@"C:\Users\sHARD\source\repos\test\test\Translate.txt"))
+            foreach (string lines in File.ReadLines(@"C:\Users\sHARD\source\repos\Learning-English\Learning English\temp\Translate.txt"))
             {
                 arr_trans[index_trans] = lines;
                 index_trans++;
