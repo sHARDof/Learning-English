@@ -7,4 +7,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Accept.png" />
+    <None Remove="Close.png" />
+    <None Remove="green-dot.png" />
+    <None Remove="Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Accept.png" />
+    <Resource Include="Close.png" />
+    <Resource Include="green-dot.png" />
+    <Resource Include="Logo.png" />
+  </ItemGroup>
+
 </Project>

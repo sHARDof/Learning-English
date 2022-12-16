@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Learning_English"
         mc:Ignorable="d"
-        Icon="C:\Users\sHARD\source\repos\Learning-English\Learning English\temp\Logo.png"
-        Title="Learning" Height="500" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize">
+        Icon="/Logo.png"
+        Title="Afilana" Height="500" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -54,7 +54,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border"
+                        <Border CornerRadius="5" x:Name="border"
                     Background="{TemplateBinding Background}"
                     BorderBrush="{TemplateBinding BorderBrush}"
                     BorderThickness="{TemplateBinding BorderThickness}"
@@ -90,46 +90,117 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+        <Style x:Key="TextBoxStyle1" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="5" x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
-    <Border Background="White" CornerRadius="20" MouseDown="Drag">
+    <Border Background="White"  CornerRadius="20" MouseDown="Drag">
         <StackPanel>
-            <Grid>
-                <Border Width="25" Height="25" Background="red" HorizontalAlignment="Right" CornerRadius="10">
-                    <Button BorderBrush="Transparent" Background="Transparent" Style="{DynamicResource DefaultButtonStyle}" FontFamily="Open Sans Extrabold" Click="CloseWindow"  Content="x" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" />
-                </Border>
-                <Border Height="25" Background="Gray" CornerRadius="8" Margin="745,0,30,0">
-                    <Button Click="HideWindow" BorderBrush="Transparent" Background="Transparent" Style="{DynamicResource DefaultButtonStyle}" FontFamily="Open Sans Extrabold"  Content="-" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" />
-                </Border>
-            </Grid>
-            <Border Height="250" Width="400" Background="LightGray" CornerRadius="20" Margin="85">
-                <StackPanel>
-                    <Label x:Name="Words" Margin="10" Content="Здесь появится слово" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Open Sans Extrabold" FontSize="20"/>
-                    <Border Width="350" Height="25" Background="White" CornerRadius="10">
-                        <TextBox Name="Input_Trans" FontSize="15" TextAlignment="Center" FontFamily="Open Sans Extrabold" Background="Transparent" BorderBrush="Transparent" ></TextBox>
-                    </Border>
-                    <Grid Height="31" Margin="5">
-                        <Image Name="AcceptImage" Visibility="Hidden" Source="C:/Users/sHARD/source/repos/Learning-English/Learning English/temp/Accept.png" Height="30" Width="36"/>
-                        <Image Name="CloseImage" Visibility="Hidden" Source="C:/Users/sHARD/source/repos/Learning-English/Learning English/temp/Close.png" Height="30" Width="36"/>
-                    </Grid>
+            <Grid Width="800" Height="500">
+                <Border Name="Border_Verbs"  Width="450" Background="#447BD4" CornerRadius="25" HorizontalAlignment="Left" Margin="299,49,0,42">
                     <Grid>
-                        <Border Width="96" Background="Gray" CornerRadius="9" Margin="152,0,152,-94" Height="38">
-                            <StackPanel>
-                                <Button Click="NextWord" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2" Content="Дальше" FontFamily="Open Sans Extrabold" FontSize="18"/>
-                            </StackPanel>
-                        </Border>
-                        <Border Background="Gray" CornerRadius="9" Margin="258,28,22,-66" Height="38">
-                            <StackPanel>
-                                <Button Click="Translate" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2" Content="Перевод" FontFamily="Open Sans Extrabold" FontSize="18"/>
-                            </StackPanel>
-                        </Border>
-                        <Border Background="Gray" CornerRadius="9" Margin="22,28,260,-66" Height="38">
-                            <StackPanel>
-                                <Button Click="Verify" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2" Content="Проверить" FontFamily="Open Sans Extrabold" FontSize="18"/>
-                            </StackPanel>
-                        </Border>
+                        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 20" Width="75" TextAlignment="Center" Height="25" FontFamily="Open Sans Extrabold" FontSize="20">1 form</TextBlock>
+                        <TextBlock VerticalAlignment="Top" Margin="40, 20" HorizontalAlignment="Center" Width="75" TextAlignment="Center" Height="25" FontFamily="Open Sans Extrabold" FontSize="20">2 form</TextBlock>
+                        <TextBlock VerticalAlignment="Top" Margin="40, 20" HorizontalAlignment="Right" Width="75" TextAlignment="Center" Height="25" FontFamily="Open Sans Extrabold" FontSize="20">3 form</TextBlock>
+                        <TextBlock Name="first_form_verbs" TextWrapping="Wrap" Width="90" HorizontalAlignment="Left" Margin="40,52,0,0" FontFamily="Open Sans Extrabold" FontSize="20" TextAlignment="Center"></TextBlock>
+                        <TextBlock Name="secound_form_verbs" TextWrapping="Wrap" Width="122" HorizontalAlignment="Center" Margin="0,52,0,0" FontFamily="Open Sans Extrabold" FontSize="20" TextAlignment="Center"></TextBlock>
+                        <TextBlock Name="three_form_verbs" TextWrapping="Wrap" Width="90" HorizontalAlignment="Left" Margin="335,52,0,0" FontFamily="Open Sans Extrabold" FontSize="20" TextAlignment="Center"></TextBlock>
                     </Grid>
-                </StackPanel>
-            </Border>
+                </Border>
+                <Border Visibility="Hidden" Name="Border_word" Width="450" Background="#447BD4" CornerRadius="25" Height="250" HorizontalAlignment="Center" Margin="299,-30,51,38">
+                    <StackPanel VerticalAlignment="Center">
+                        <Grid Width="350">
+                            <Label Height="45" Name="Words" Content="Здесь появится слово" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Open Sans Extrabold" FontSize="20" Margin="37,0,37,0"/>
+                            <StackPanel>
+                                <Grid>
+                                    <Image Visibility="Hidden" Source="/Accept.png" Name="Accept_Image" Width="30" Height="30" HorizontalAlignment="Right" Margin="0,38,49,-6"></Image>
+                                    <Image Visibility="Hidden" Source="/Close.png" Name="Close_Image" Width="30" Height="30" HorizontalAlignment="Right" Margin="0,38,49,-6"></Image>
+                                </Grid>
+                            </StackPanel>
+                            <TextBox Style="{DynamicResource TextBoxStyle1}" Text="Перевод слова" Name="Input_Trans" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center" FontFamily="Open Sans Extrabold" Background="White" BorderBrush="Transparent" Loaded="Back_text" Width="162" Margin="0,45,0,0" ></TextBox>
+                        </Grid>
+                        <Grid Width="350">
+                            <Button Click="NextWord" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="15" Content="Дальше" FontFamily="Open Sans Extrabold" FontSize="18"/>
+                            <Button Click="Translate" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="2" Content="Перевод" FontFamily="Open Sans Extrabold" FontSize="18"/>
+                            <Button Click="Verify" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="2" Content="Проверить" FontFamily="Open Sans Extrabold" FontSize="18"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <Border Height="500" Name="UI_menu" Width="250" Background="#104BA9" HorizontalAlignment="Left" VerticalAlignment="Top" CornerRadius="15">
+                    <StackPanel>
+                        <Border Name="Avatar" Background="White" Width="150" Height="150" CornerRadius="100" VerticalAlignment="Top" Margin="25">
+                            <Image Width="120" Height="120" Source="\Logo.png"></Image>
+                        </Border>
+                        <Border Name="Nickname" Width="140" Background="White" CornerRadius="12" Height="50">
+                            <TextBlock FontFamily="Open Sans Extrabold" Text="sHARD" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        </Border>
+                        <Border Name="ShowStats" Width="140" Height="35" Background="White" CornerRadius="10" Margin="30">
+                            <Button Content="You stats" Click="ShowStats_B" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Open Sans Extrabold" FontSize="25"/>
+                        </Border>
+                        <Border Name="ShowWords" Width="140" Height="35" Background="White" CornerRadius="10" Margin="-15">
+                            <Button Content="Words" Click="ShowWords_B" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Open Sans Extrabold" FontSize="25"/>
+                        </Border>
+                        <Border Name="ShowVerbs" Width="140" Height="35" Background="White" CornerRadius="10" Margin="30">
+                            <Button Content="Verbs" Click="ShowVerbs_B" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Open Sans Extrabold" FontSize="25"/>
+                        </Border>
+                        <Border Name="ShowTimes" Width="140" Height="35" Background="White" CornerRadius="10" Margin="-15">
+                            <Button Content="Times" Click="ShowTimes_B" Style="{DynamicResource DefaultButtonStyle}"  BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Open Sans Extrabold" FontSize="25"/>
+                        </Border>
+                        <Image Visibility="Visible" Name="Online_Words" Margin="0,-113,180,150" Width="26" Height="25" Source="/green-dot.png"/>
+                        <Image Visibility="Hidden" Name="Online_Verbs" Margin="0,-125,180,150" Width="26" Height="25" Source="/green-dot.png"/>
+                        <Image Visibility="Hidden" Name="Online_Times" Margin="0,-125,180,150" Width="26" Height="25" Source="/green-dot.png"/>
+                    </StackPanel>
+                </Border>
+                <Grid VerticalAlignment="Top" Margin="719,0,22,0" Height="44">
+                    <Border Width="25" Height="25" Background="red" HorizontalAlignment="Right" CornerRadius="8">
+                        <Button BorderBrush="Transparent" Background="Transparent" Style="{DynamicResource DefaultButtonStyle}" FontFamily="Open Sans Extrabold" Click="CloseWindow"  Content="x" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" />
+                    </Border>
+                    <Border Width="25" Height="25" Background="Gray" CornerRadius="8" HorizontalAlignment="Left">
+                        <Button Click="HideWindow" BorderBrush="Transparent" Background="Transparent" Style="{DynamicResource DefaultButtonStyle}" FontFamily="Open Sans Extrabold"  Content="-" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" />
+                    </Border>
+                </Grid>
+            </Grid>
         </StackPanel>
     </Border>
 </Window>
