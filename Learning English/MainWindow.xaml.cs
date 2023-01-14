@@ -114,7 +114,12 @@ namespace Learning_English
 
         private void ShowTimes_B(object sender, RoutedEventArgs e)
         {
-
+            Border_word.Visibility = Visibility.Hidden;
+            Border_Verbs.Visibility = Visibility.Hidden;
+            Border_Times.Visibility = Visibility.Visible;
+            Online_Times.Visibility = Visibility.Visible;
+            Online_Words.Visibility = Visibility.Hidden;
+            Online_Verbs.Visibility = Visibility.Hidden;
         }
 
         private void ShowVerbs_B(object sender, RoutedEventArgs e)
@@ -125,6 +130,7 @@ namespace Learning_English
 
             Border_word.Visibility = Visibility.Hidden;
             Border_Verbs.Visibility = Visibility.Visible;
+            Border_Times.Visibility = Visibility.Hidden;
             Online_Times.Visibility = Visibility.Hidden;
             Online_Words.Visibility = Visibility.Hidden;
             Online_Verbs.Visibility = Visibility.Visible;      
@@ -161,6 +167,7 @@ namespace Learning_English
         {
             Border_word.Visibility = Visibility.Visible;
             Border_Verbs.Visibility = Visibility.Hidden;
+            Border_Times.Visibility = Visibility.Hidden;
             Online_Times.Visibility = Visibility.Hidden;
             Online_Words.Visibility = Visibility.Visible;
             Online_Verbs.Visibility = Visibility.Hidden;
@@ -169,6 +176,18 @@ namespace Learning_English
         private void Back_text(object sender, RoutedEventArgs e)
         {
             Input_Trans.Text = "Translate word";
+        }
+
+        private void Show_PastSimple_Click(object sender, RoutedEventArgs e)
+        {
+            Past_Simple past = new Past_Simple();
+            past.Show();
+        }
+
+        private void Show_PastCon_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 con = new Window1();
+            con.Show();
         }
     }
 }

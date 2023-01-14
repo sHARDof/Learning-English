@@ -38,3 +38,7 @@ C:\Users\sHARD\source\repos\Learning-English\Learning English\obj\Debug\netcorea
 C:\Users\sHARD\source\repos\Learning-English\Learning English\obj\Debug\netcoreapp3.1\Learning English.dll
 C:\Users\sHARD\source\repos\Learning-English\Learning English\obj\Debug\netcoreapp3.1\Learning English.pdb
 C:\Users\sHARD\source\repos\Learning-English\Learning English\obj\Debug\netcoreapp3.1\Learning English.genruntimeconfig.cache
+C:\Users\sHARD\source\repos\Learning-English\Learning English\obj\Debug\netcoreapp3.1\Past_Simple.g.cs
+C:\Users\sHARD\source\repos\Learning-English\Learning English\obj\Debug\netcoreapp3.1\Past_Simple.baml
+C:\Users\sHARD\source\repos\Learning-English\Learning English\obj\Debug\netcoreapp3.1\Window1.g.cs
+C:\Users\sHARD\source\repos\Learning-English\Learning English\obj\Debug\netcoreapp3.1\Window1.baml
